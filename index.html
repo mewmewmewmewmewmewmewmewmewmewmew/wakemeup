@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE2NLC6G4T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-YE2NLC6G4T');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WakeMeUp.at is a simple and easy-to-use online alarm clock that lets you set alarms using your favorite YouTube videos."
+    />
+    <meta
+      name="keywords"
+      content="online alarm clock, YouTube alarm clock, video alarm, alarm clock, wake up, timer"
+    />
+    <title>WakeMeUp.at - Online Alarm Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="overlay" class="overlay" aria-hidden="true">
+      <div class="confirmation-box" role="dialog" aria-labelledby="confirmation-title" aria-modal="true">
+        <p class="eyebrow">One quick click</p>
+        <h2 id="confirmation-title">Arm your alarm</h2>
+        <p id="confirmation-text">Alarm set for:</p>
+        <p class="confirmation-note">
+          Browsers may block alarm audio until you interact with the page. This click helps WakeMeUp.at play sound when the timer ends.
+        </p>
+        <button id="confirm-alarm" class="button button-primary" type="button">Arm alarm</button>
+      </div>
+    </div>
+
+    <main class="app-shell" aria-labelledby="header">
+      <section class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">YouTube-powered alarm clock</p>
+          <h1 id="header">wakemeup.at/<span id="header-time">HHMM</span></h1>
+          <p class="tagline">Set a time, pick a YouTube video, and keep the shareable alarm URL.</p>
+        </div>
+
+        <div id="sound-status" class="sound-status" aria-live="polite">Sound not armed yet</div>
+      </section>
+
+      <section class="clock-card" aria-label="Alarm clock">
+        <div class="clock-meta">
+          <span>CURRENT TIME</span>
+          <span id="set-time"></span>
+        </div>
+
+        <div class="clock-row">
+          <span id="timer-military">00:00:00</span>
+          <span id="countdown" aria-live="polite"></span>
+          <div id="alarm-controls" class="alarm-actions" hidden>
+            <button id="snooze" class="button button-secondary" type="button">Snooze 5 min</button>
+            <button id="stop" class="button button-danger" type="button">Stop</button>
+          </div>
+        </div>
+
+        <div class="clock-meta">
+          <span id="timer">00:00:00</span>
+          <span id="alarm-time">No alarm set</span>
+        </div>
+      </section>
+
+      <form id="controls" class="settings-card">
+        <div class="field-group time-field">
+          <label for="alarmTime">Set alarm for</label>
+          <input id="alarmTime" type="time" required />
+        </div>
+
+        <div class="field-group video-field">
+          <label for="ytLink">YouTube video</label>
+          <div class="input-action-row">
+            <input id="ytLink" type="text" value="https://www.youtube.com/watch?v=KkaNJPRoJhQ" />
+            <button id="setAlarm" class="button button-primary" type="submit">Set Alarm</button>
+          </div>
+          <p class="field-help">Paste a YouTube URL, Shorts link, youtu.be link, or video ID.</p>
+        </div>
+      </form>
+
+      <section class="player-card" aria-label="Selected YouTube alarm video">
+        <div id="player-container">
+          <div id="player"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="adsense-banner">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8995498931115769"
+        crossorigin="anonymous"
+      ></script>
+      <!-- normaladwakemeup -->
+      <ins
+        class="adsbygoogle"
+        data-ad-client="ca-pub-8995498931115769"
+        data-ad-slot="1424135376"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <script src="alarm.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>
