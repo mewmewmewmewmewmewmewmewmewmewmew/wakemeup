@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE2NLC6G4T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-YE2NLC6G4T');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WakeMeUp.at is a simple and easy-to-use online alarm clock that lets you set alarms using your favorite YouTube videos."
+    />
+    <meta
+      name="keywords"
+      content="online alarm clock, YouTube alarm clock, video alarm, alarm clock, wake up, timer"
+    />
+    <title id="countdowntitle">WakeMeUp.at - Online Alarm Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="overlay" class="overlay" aria-hidden="true">
+      <div class="confirmation-box" role="dialog" aria-labelledby="confirmation-title" aria-modal="true">
+        <h2 id="confirmation-title">Confirm Alarm</h2>
+        <p id="confirmation-text">Alarm set for:</p>
+        <button id="confirm-alarm" type="button">Confirm</button>
+      </div>
+    </div>
+
+    <main id="container">
+      <h1 id="header">wakemeup.at/<span id="header-time">HHMM</span></h1>
+
+      <div class="banner banner-small">
+        <span>CURRENT TIME</span>
+        <span id="set-time"></span>
+      </div>
+
+      <div class="banner banner-main">
+        <span id="timer-military">00:00:00</span>
+        <span id="countdown" aria-live="polite"></span>
+        <div id="alarm-controls" hidden>
+          <button id="snooze" type="button">Snooze (5 min)</button>
+          <button id="stop" type="button">Stop</button>
+        </div>
+      </div>
+
+      <div class="banner banner-small">
+        <span id="timer">00:00:00</span>
+        <span id="alarm-time"></span>
+      </div>
+
+      <form id="controls">
+        <div class="control-group">
+          <label for="alarmTime">Set alarm for</label>
+          <input id="alarmTime" type="time" required />
+        </div>
+
+        <div class="control-group control-group-wide">
+          <label for="ytLink">YouTube link:</label>
+          <input id="ytLink" type="text" value="https://www.youtube.com/watch?v=KkaNJPRoJhQ" />
+          <button id="setAlarm" type="submit">Set Alarm</button>
+        </div>
+      </form>
+
+      <div id="player-container">
+        <div id="player"></div>
+      </div>
+    </main>
+
+    <div class="adsense-banner">
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8995498931115769"
+        crossorigin="anonymous"
+      ></script>
+      <!-- normaladwakemeup -->
+      <ins
+        class="adsbygoogle"
+        data-ad-client="ca-pub-8995498931115769"
+        data-ad-slot="1424135376"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <script src="alarm.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </body>
+</html>
